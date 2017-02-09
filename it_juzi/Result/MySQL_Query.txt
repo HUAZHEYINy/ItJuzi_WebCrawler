@@ -1,0 +1,40 @@
+CREATE TABLE `horse_com` (  `com_id` varchar(100) CHARACTER SET utf8mb4 NOT NULL,  `com_name` varchar(100) CHARACTER SET utf8mb4 DEFAULT NULL,  `invse_year` varchar(100) CHARACTER SET utf8mb4 DEFAULT NULL,  `invse_month` varchar(100) CHARACTER SET utf8mb4 DEFAULT NULL,  `invse_day` varchar(100) CHARACTER SET utf8mb4 DEFAULT NULL,  `com_scope_id` varchar(100) CHARACTER SET utf8mb4 DEFAULT NULL,  `com_prov` varchar(100) CHARACTER SET utf8mb4 DEFAULT NULL,  `invse_round_id` varchar(100) CHARACTER SET utf8mb4 DEFAULT NULL,  `cat_name` varchar(100) CHARACTER SET utf8mb4 DEFAULT NULL,  `com_logo_archive` varchar(100) CHARACTER SET utf8mb4 DEFAULT NULL,  `invse_detail_money` varchar(100) CHARACTER SET utf8mb4 DEFAULT NULL,  `invse_guess_particulars` varchar(100) CHARACTER SET utf8mb4 DEFAULT NULL,  `current` varchar(100) CHARACTER SET utf8mb4 DEFAULT NULL,  `inves_round` varchar(100) CHARACTER SET utf8mb4 DEFAULT NULL,  `invse_currency_id` varchar(100) CHARACTER SET utf8mb4 DEFAULT NULL,  PRIMARY KEY (`com_id`)) ENGINE=InnoDB DEFAULT CHARSET=latin1
+
+
+CREATE TABLE `horse_detail` (
+  `com_id` varchar(100) CHARACTER SET utf8mb4 NOT NULL,
+  `com_born_month` varchar(100) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `com_born_year` varchar(100) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `com_city` varchar(100) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `com_des` varchar(100) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `com_prov` varchar(100) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `com_url` varchar(100) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `scope` varchar(100) CHARACTER SET utf8mb4 DEFAULT NULL,
+  PRIMARY KEY (`com_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1
+
+
+CREATE TABLE `invst_firm` (
+  `com_id` varchar(100) CHARACTER SET utf8mb4 NOT NULL,
+  `invst_id` varchar(100) CHARACTER SET utf8mb4 NOT NULL DEFAULT '',
+  `invst_name` varchar(100) CHARACTER SET utf8mb4 DEFAULT NULL,
+  PRIMARY KEY (`com_id`,`invst_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1
+
+
+
+CREATE TABLE `member` (
+  `com_id` varchar(100) CHARACTER SET utf8mb4 NOT NULL,
+  `per_id` varchar(100) CHARACTER SET utf8mb4 NOT NULL DEFAULT '',
+  `per_name` varchar(100) CHARACTER SET utf8mb4 DEFAULT NULL,
+  PRIMARY KEY (`com_id`,`per_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1
+
+
+
+CREATE TABLE `tag` (
+  `com_id` varchar(100) CHARACTER SET utf8mb4 NOT NULL,
+  `com_tag_id` varchar(100) CHARACTER SET utf8mb4 NOT NULL DEFAULT '',
+  `com_tag_name` varchar(100) CHARACTER SET utf8mb4 DEFAULT NULL,
+  PRIMARY KEY (`com_id`,`com_tag_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1
